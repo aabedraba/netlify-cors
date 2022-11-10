@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: letsencrypt-cert
+  namespace: default
+spec:
+  dnsNames:
+    - kusk-cors-api.aabedraba.com
+  secretName: kusk-cors-api.aabedraba.com
+  issuerRef:
+    name: letsencrypt-prod
